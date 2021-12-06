@@ -1,6 +1,7 @@
 package pl.kzapart.flightradar.service;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import pl.kzapart.flightradar.model.Airplane;
