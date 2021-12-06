@@ -13,6 +13,7 @@ public class Airplane {
     private String icao24;
     private String callsign;
     private String origin_country;
-    private float longitude;
-    private float latitude;
+    private double longitude;
+    private double latitude;
+    private double heading;
 }
