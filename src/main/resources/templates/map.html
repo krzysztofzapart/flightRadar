@@ -22,7 +22,7 @@
 <script src="https://unpkg.com/leaflet-canvas-marker@0.2.0"></script>
 <script th:inline="javascript">
 
-    var map = L.map('map').setView([52.95, 19.23], 13);
+    var map = L.map('map').setView([52.95, 19.23], 7);
     var ciLayer = L.canvasIconLayer({}).addTo(map);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -33,16 +33,14 @@
     var icon = L.icon({
     iconUrl: 'plane.png',
 
-    iconSize:     [20, 20], // size of the icon
-    iconAnchor:   [20, 20], // point of the icon which will correspond to marker's location
-    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+    iconSize:     [15, 15], // size of the icon
+    iconAnchor:   [15, 15], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-10, -10] // point from which the popup should open relative to the iconAnchor
 });
 
     airplanes.forEach(value => {
-        var polygon;
-        var temp =L.marker([value.latitude, value.longitude], {icon: icon});
+        var temp =L.marker([value.latitude, value.longitude], {icon: icon}).addTo(map).bindPopup("Flight " +value.callsign+" from "+value.origin_country);
         temp.setRotationAngle(value.heading);
-        ciLayer.addMarker(temp);
     })
 
 
