@@ -15,7 +15,7 @@ public class AirplaneController {
 
     private final AirplaneService airplaneService;
 
-    @GetMapping("/index")
+    @GetMapping()
     public String getIndex(Model model) throws IOException {
         model.addAttribute("airplanes", airplaneService.getAirplanes());
         return "map";
