@@ -2,6 +2,9 @@
 
 Flight Radar written for training and fun. The app shows the current position of the planes, when you click on it, it displays information about the flight id.
 
+##Demo
+Checkout [Flight Radar demo](https://flightradar.herokuapp.com/).
+
 ### Flight Radar
 ![Flight Radar](flightradar.png?raw=true "Title")
 
