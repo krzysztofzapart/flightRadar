@@ -22,7 +22,7 @@ Checkout [Flight Radar demo](https://flightradar.herokuapp.com/).
    ```sh
    git clone https://github.com/krzysztofzapart/flightRadar.git
    ```
-2. Open your terminal in covid19-map folder.
+2. Open your terminal in flightRadar folder.
 
    ```sh
    cd flightRadar
